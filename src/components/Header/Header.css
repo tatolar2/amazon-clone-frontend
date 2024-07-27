@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.fixed_header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header_container {
+  background-color: #0e0c0c;
+  display: flex;
+  gap: 10px;
+  color: white;
+  align-items: center;
+  height: 60px;
+}
+.logo_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  /* margin-left: -10px; */
+  row-gap: -20px;
+}
+.logo_container img {
+  width: 75%;
+  padding-top: 5px;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+.delivery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* font-weight: bold; */
+  padding: 5px;
+  color: white;
+  font-size: 10px;
+}
+span {
+  font-size: 15px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  flex: 1;
+}
+.search select,
+.search input {
+  padding: 10px;
+  font-weight: bold;
+  outline: 1px solid white;
+}
+
+.search select {
+  border: none;
+}
+.search input {
+  border: 1px solid white;
+  width: 500px;
+  margin-right: -2px;
+}
+.search svg {
+  padding: 7px;
+  background: #cea5a5;
+  color: black;
+}
+.search svg:hover {
+  background-color: rgb(223, 190, 130);
+}
+.search:focus-within {
+  border: 2px solid rgb(235, 161, 173);
+}
+.order_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 450px;
+  gap: 10px;
+}
+.order_container a {
+  text-decoration: none;
+  color: white;
+}
+.order_container p {
+  font-size: 10px;
+}
+.language {
+  display: flex;
+  height: 15px;
+  gap: 5px;
+  padding-right: 60px;
+}
+
+.cart {
+  position: relative;
+}
+.cart span {
+  position: absolute;
+  font-weight: bold;
+  top: 0px;
+  font-size: 15px;
+  background-color: black;
+  left: 16px;
+  color: orange;
+}
+.order_container a:hover,
+.lower_container ul li:hover {
+  border: 1px solid white;
+  border-radius: 6px;
+}
+/* lower container CSS */
+.lower_container {
+  background-color: #232f3e;
+  color: white;
+}
+.lower_container ul {
+  display: flex;
+  list-style: none;
+  gap: 5px;
+}
+.lower_container ul li {
+  padding: 8px;
+}
+.lower_container {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+/* to make responsive for diffrent devices */
+@media screen and (max-width: 576px) {
+  .header_container {
+    display: flex;
+    flex-direction: column !important;
+    height: auto;
+  }
+  .lower_container ul li:not(:first-child) {
+    display: none;
+  }
+  .language {
+    display: none;
+  }
+}
