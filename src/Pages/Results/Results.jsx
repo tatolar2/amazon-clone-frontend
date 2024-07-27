@@ -5,6 +5,7 @@ import { productUrl } from "../../Api/endPoints";
 import { useState, useEffect } from "react";
 import ProductCard from "../../components/Product/ProductCard";
 import Loader from "../../components/Loader/Loader";
+import "./Results.css";
 
 function Results() {
   const [results, setResults] = useState([]);

@@ -74,7 +74,7 @@ function Header() {
           </div>
             </Link>
             {/* orders */}
-            <Link to="/Orders">
+            <Link to="/orders">
               <p>Returns</p>
               <span>& Orders</span>
             </Link>

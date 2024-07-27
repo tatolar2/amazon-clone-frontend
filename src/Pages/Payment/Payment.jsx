@@ -45,13 +45,14 @@ function Payment() {
         url: `/payment/create?total=${total * 100}`,
       });
       const { clientSecret } = response.data;
-
+      console.log(clientSecret);
       // 2. Client-side (React side) confirmation
       const { paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),
         },
       });
+
       console.log(paymentIntent);
       // 3. After the confirmation ---> order Firestore database save, clear basket
       await db
@@ -72,7 +73,7 @@ function Payment() {
       console.error("Error in payment:", error);
       setProcessing(false);
     }
-    navigate("/orders", { state: { msg: "You have a new order" } });
+    navigate("/Orders", { state: { msg: "You have a new order" } });
   };
   return (
     <LayOut>
